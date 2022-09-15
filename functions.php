@@ -111,3 +111,55 @@ function register_childtheme_menus() {
   }
   
   add_action( 'init', 'register_childtheme_menus' );
+
+
+
+  /* Remove <p> tags from archive description */
+	remove_filter('term_description','wpautop');
+	remove_filter ('get_the_archive_description', 'wpautop');
+	remove_filter('term_description','wpautop');
+	remove_filter( 'the_content', 'wpautop' );
+	remove_filter( 'the_content', 'wpautop' );
+	remove_filter( 'the_excerpt', 'wpautop' );
+	remove_filter('term_description','wpautop');
+		
+
+// get rid of the “Category:”, “Tag:”, “Author:”, “Archives:” and “Other taxonomy name:”
+function my_theme_archive_title( $title ) {
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+    } elseif ( is_author() ) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
+    } elseif ( is_post_type_archive() ) {
+        $title = post_type_archive_title( '', false );
+    } elseif ( is_tax() ) {
+        $title = single_term_title( '', false );
+    }
+    return $title;
+}
+add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
+
+
+/* Image Size for "Online Artikel" Overview */
+add_image_size( 'online-artikel-bild', 560, 320, true );
+
+/* Read More Tag for Excerpt (Online Artikel) */
+add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' ); 
+  
+if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) { 
+	/** 
+	 * Adds a custom read more link to all excerpts, manually or automatically generated 
+	 * 
+	 * @param string $post_excerpt Posts's excerpt. 
+	 * 
+	 * @return string 
+	 */ 
+	function understrap_all_excerpts_get_more_link( $post_excerpt ) { 
+		if ( ! is_admin() ) { 
+			$post_excerpt = $post_excerpt . '...<div class="online-artikel-schau-rein" ><a href="' . esc_url( get_permalink( get_the_ID() ) ) . '">Schau rein<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>'; 
+		} 
+		return $post_excerpt; 
+	} 
+} 
