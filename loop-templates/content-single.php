@@ -12,8 +12,12 @@ defined( 'ABSPATH' ) || exit;
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
+		<div id="online-artikel-singel-header-image" class="entry-image-wrapper">
+			<div class="online-artikel-single-image-overlay"></div>
+			<?php echo get_the_post_thumbnail( $post->ID, 'online-artikel-single-image' ); ?></div>
+	
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title online-artikel-single-h1-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
 
@@ -23,7 +27,7 @@ defined( 'ABSPATH' ) || exit;
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	
 
 	<div class="entry-content">
 

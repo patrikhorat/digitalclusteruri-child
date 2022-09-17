@@ -142,8 +142,9 @@ function my_theme_archive_title( $title ) {
 add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
 
 
-/* Image Size for "Online Artikel" Overview */
-add_image_size( 'online-artikel-bild', 560, 320, true );
+/* Image Size for "Online Artikel" Archive & Single Page */
+add_image_size( 'online-artikel-archive-image', 560, 320, true );
+add_image_size( 'online-artikel-single-image', 1320, 640, true );
 
 /* Read More Tag for Excerpt (Online Artikel) */
 add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' ); 
