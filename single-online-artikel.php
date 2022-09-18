@@ -17,17 +17,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 		<main class="site-main" id="main">
-
+		
 			<?php
 			while ( have_posts() ) {
 				the_post();
 				get_template_part( 'loop-templates/content', 'single' );
-				understrap_post_nav();
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) {
-					comments_template();
-				}
+				?>
+				<div id="online-artikel-comments-navigation-wrapper">
+					<div class="online-artikel-bottom-navigation">
+						<?php understrap_post_nav(); ?>
+					</div>
+				
+					<?php
+						// If comments are open or we have at least one comment, load up the comment template.
+						if ( comments_open() || get_comments_number() ) {
+							comments_template();
+						} ?>
+				</div>
+				<?php	
 			}
 			?>
 

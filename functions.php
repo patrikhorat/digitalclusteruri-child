@@ -143,8 +143,8 @@ add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
 
 
 /* Image Size for "Online Artikel" Archive & Single Page */
-add_image_size( 'online-artikel-archive-image', 560, 320, true );
-add_image_size( 'online-artikel-single-image', 1320, 640, true );
+add_image_size( 'online-artikel-archive-image', 960, 600, true );
+add_image_size( 'online-artikel-single-image', 1920, 800, true );
 
 /* Read More Tag for Excerpt (Online Artikel) */
 add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' ); 
@@ -164,3 +164,34 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 		return $post_excerpt; 
 	} 
 } 
+
+
+/* Online Artikel Navigation */
+if ( ! function_exists( 'understrap_post_nav' ) ) {
+	/**
+	 * Display navigation to next/previous post when applicable.
+	 */
+	function understrap_post_nav() {
+		// Don't print empty markup if there's nowhere to navigate.
+		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+		$next     = get_adjacent_post( false, '', false );
+		if ( ! $next && ! $previous ) {
+			return;
+		}
+		?>
+		<nav class="container navigation post-navigation">
+			<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
+			<div class="d-flex nav-links justify-content-between">
+				<?php
+				if ( get_previous_post_link() ) {
+					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
+				}
+				if ( get_next_post_link() ) {
+					next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
+				}
+				?>
+			</div><!-- .nav-links -->
+		</nav><!-- .navigation -->
+		<?php
+	}
+}
