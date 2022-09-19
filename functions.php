@@ -111,3 +111,87 @@ function register_childtheme_menus() {
   }
   
   add_action( 'init', 'register_childtheme_menus' );
+
+
+
+  /* Remove <p> tags from archive description */
+	remove_filter('term_description','wpautop');
+	remove_filter ('get_the_archive_description', 'wpautop');
+	remove_filter('term_description','wpautop');
+	remove_filter( 'the_content', 'wpautop' );
+	remove_filter( 'the_content', 'wpautop' );
+	remove_filter( 'the_excerpt', 'wpautop' );
+	remove_filter('term_description','wpautop');
+		
+
+// get rid of the “Category:”, “Tag:”, “Author:”, “Archives:” and “Other taxonomy name:”
+function my_theme_archive_title( $title ) {
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+    } elseif ( is_author() ) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
+    } elseif ( is_post_type_archive() ) {
+        $title = post_type_archive_title( '', false );
+    } elseif ( is_tax() ) {
+        $title = single_term_title( '', false );
+    }
+    return $title;
+}
+add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
+
+
+/* Image Size for "Online Artikel" Archive & Single Page */
+add_image_size( 'online-artikel-archive-image', 960, 600, true );
+add_image_size( 'online-artikel-single-image', 1920, 800, true );
+
+/* Read More Tag for Excerpt (Online Artikel) */
+add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' ); 
+  
+if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) { 
+	/** 
+	 * Adds a custom read more link to all excerpts, manually or automatically generated 
+	 * 
+	 * @param string $post_excerpt Posts's excerpt. 
+	 * 
+	 * @return string 
+	 */ 
+	function understrap_all_excerpts_get_more_link( $post_excerpt ) { 
+		if ( ! is_admin() ) { 
+			$post_excerpt = $post_excerpt . '...<div class="online-artikel-schau-rein" ><a href="' . esc_url( get_permalink( get_the_ID() ) ) . '">Schau rein<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>'; 
+		} 
+		return $post_excerpt; 
+	} 
+} 
+
+
+/* Online Artikel Navigation */
+if ( ! function_exists( 'understrap_post_nav' ) ) {
+	/**
+	 * Display navigation to next/previous post when applicable.
+	 */
+	function understrap_post_nav() {
+		// Don't print empty markup if there's nowhere to navigate.
+		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+		$next     = get_adjacent_post( false, '', false );
+		if ( ! $next && ! $previous ) {
+			return;
+		}
+		?>
+		<nav class="container navigation post-navigation">
+			<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
+			<div class="d-flex nav-links justify-content-between">
+				<?php
+				if ( get_previous_post_link() ) {
+					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
+				}
+				if ( get_next_post_link() ) {
+					next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
+				}
+				?>
+			</div><!-- .nav-links -->
+		</nav><!-- .navigation -->
+		<?php
+	}
+}
