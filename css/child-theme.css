@@ -15764,6 +15764,10 @@ h4, .h4 {
   color: white;
   padding-top: 3em;
 }
+#wrapper-footer .footerbar .footertext {
+  font-size: 0.8em;
+  line-height: 1.6em;
+}
 #wrapper-footer .copyrightbar {
   padding-left: 200;
   padding-right: 0;
@@ -15777,6 +15781,7 @@ h4, .h4 {
 #wrapper-footer .copyrightbar .copybrightwrapper .copyright {
   color: white;
   font-weight: 200;
+  font-size: 0.75em;
   flex: 1;
   padding-top: 0.75em;
   padding-bottom: 0.75em;
@@ -15794,7 +15799,7 @@ h4, .h4 {
   flex-direction: row;
 }
 #socialmedia_menu .nav-item {
-  padding-left: 1.15em;
+  padding-left: 12px;
 }
 #socialmedia_menu a.nav-link {
   color: white;
@@ -15804,9 +15809,9 @@ h4, .h4 {
 }
 #socialmedia_menu a.nav-link .fa {
   font-size: 10px;
-  height: 20px;
+  height: 22px;
   padding-top: 5px;
-  width: 20px;
+  width: 25px;
   text-align: center;
 }
 
@@ -15819,10 +15824,10 @@ h4, .h4 {
   padding-left: 0px;
 }
 #wrapper-footer-full .widget_nav_menu .menu li {
-  padding-bottom: 0.4em;
+  padding-bottom: 0.2em;
 }
 #wrapper-footer-full .widget_nav_menu .menu a {
-  font-size: 1em;
+  font-size: 0.9em;
   line-height: 1.2em;
   text-decoration: none;
   color: white;
@@ -15834,9 +15839,9 @@ h4, .h4 {
 
 /* footer title */
 .footerwidgettitle {
-  font-size: 1.2em;
-  margin-top: 0.4em;
-  margin-bottom: 1.2em;
+  font-size: 1em;
+  margin-top: 0.6em;
+  margin-bottom: 1.6em;
 }
 
 /* page templates margins top/bottom */
