@@ -31,6 +31,6 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<header id="wrapper-navbar">
+	<header id="wrapper-navbar" class="sticky-top">
 		<?php get_template_part( 'global-templates/navbar-dcu' ); ?>
 	</header><!-- #wrapper-navbar end -->
