@@ -20,10 +20,13 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="https://use.typekit.net/nyd5uhm.css">
+
+
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-632b6667456ade33"></script>
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 

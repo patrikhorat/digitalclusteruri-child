@@ -34,9 +34,6 @@ defined( 'ABSPATH' ) || exit;
 						<?php the_title( '<h1 class="entry-title online-artikel-single-h1-title">', '</h1>' ); ?>
 					</div>
 					<div class="online-artikel-single-header-meta-info">
-						<?php the_excerpt(); ?>
-					</div>
-					<div class="online-artikel-single-header-meta-info">
 						<?php echo '<div class="online-artikel-single-header-meta-info-author">'.get_avatar( get_the_author_meta( 'ID' ), 50  ).'</div>'; ?>
 						<?php echo '<div class="online-artikel-single-header-meta-info-author">('.get_the_author_link().')</div>'; ?>
 						<?php echo '<div class="online-artikel-single-header-meta-info-author">Veröffentlicht am '.get_the_date().'</div>'; ?>
@@ -47,14 +44,8 @@ defined( 'ABSPATH' ) || exit;
 	</header><!-- .entry-header -->
 
 	<div id="online-artikel-single-content-wrapper" class="entry-content">
-		<div class="online-artikel-single-content-sharebuttonbox">
-		<div class="online-artikel-single-content-sharebutton"><a title="Twitter" target="_blank" rel="noopener noreferrer" href="#twitter" class="nav-link"><i class="fa fa-send"></i></a></div>
-		<div class="online-artikel-single-content-sharebutton"><a title="Twitter" target="_blank" rel="noopener noreferrer" href="#twitter" class="nav-link"><i class="fa fa-facebook"></i></a></div>
-		<div class="online-artikel-single-content-sharebutton"><a title="Twitter" target="_blank" rel="noopener noreferrer" href="#twitter" class="nav-link"><i class="fa fa-twitter"></i></a></div>
-		<div class="online-artikel-single-content-sharebutton"><a title="Twitter" target="_blank" rel="noopener noreferrer" href="#twitter" class="nav-link"><i class="fa fa-linkedin"></i></a></div>
-		<div class="online-artikel-single-content-sharebutton"><a title="Twitter" target="_blank" rel="noopener noreferrer" href="#twitter" class="nav-link"><i class="fa fa-whatsapp"></i></a></div>
-		</div>
 
+		<div class="addthis_inline_share_toolbox"></div>
 		<?php
 		the_content();
 		?>
