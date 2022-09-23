@@ -195,3 +195,16 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 		<?php
 	}
 }
+
+
+/**
+ * Vorschaubild für Facebook festlegen
+*/
+
+function wp_bibel_de_open_graph_image() {
+	if( has_post_thumbnail() ) : 
+		echo '<meta property="og:image" content="' . get_the_post_thumbnail_url(get_the_ID(), 'full') . '" / >';
+	endif; 
+}
+
+add_action('wp_head', 'wp_bibel_de_open_graph_image'); 
