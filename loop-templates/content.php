@@ -2,7 +2,7 @@
 /**
  * Post rendering content according to caller of get_template_part
  *
- * @package Understrap
+ * @package digitalclusteruri
  */
 
 // Exit if accessed directly.
@@ -22,9 +22,10 @@ defined( 'ABSPATH' ) || exit;
 				<div class="online-artikel-tags-and-author">
 						<?php
 						$posttags = get_the_tags();
+						$tagbase = get_option( 'tag_base' );
 						if ($posttags) {
 						foreach($posttags as $tag) {
-							echo '<div class="online-artikel-tag">'.$tag->name . '</div>'; 
+							echo '<div class="online-artikel-tag"><a href="'. get_tag_link( $tag ) .'">'.$tag->name . '</a></div>';
 						}
 						}
 						echo '<div class="online-artikel-author">'.get_the_author_link().'</div>'
