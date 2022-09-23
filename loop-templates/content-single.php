@@ -2,7 +2,7 @@
 /**
  * Single post partial template
  *
- * @package Understrap
+ * @package digitalclusteruri
  */
 
 // Exit if accessed directly.
@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
 						$posttags = get_the_tags();
 						if ($posttags) {
 						foreach($posttags as $tag) {
-							echo '<div class="online-artikel-tag-single-page">'.$tag->name . '</div>'; 
+							echo '<div class="online-artikel-tag-single-page"><a href="'. get_tag_link( $tag ) .'">'.$tag->name . '</a></div>'; 
 						}
 						}
 						?>

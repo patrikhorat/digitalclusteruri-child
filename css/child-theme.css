@@ -15844,16 +15844,15 @@ h4, .h4 {
 }
 
 /* page templates margins top/bottom */
-#standard-full-width-page-wrapper,
-#standard-full-width-page-wrapper-archive {
+#standard-full-width-page-wrapper {
   margin-top: 3.75em;
-  margin-bottom: 2.25em;
+  margin-bottom: 3.75em;
 }
 
 #standard-full-width-page-wrapper-archive {
   background: #EDEBE3;
   padding-top: 3.75em;
-  padding-bottom: 2.25em;
+  padding-bottom: 5em;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -16034,6 +16033,10 @@ h4, .h4 {
   box-shadow: 0px 3px 3px #00000029;
   margin-right: 0.4em;
 }
+.online-artikel-tags-and-author .online-artikel-tag a {
+  color: white;
+  text-decoration: none;
+}
 .online-artikel-tags-and-author .online-artikel-author {
   font-size: 0.75em;
   font-weight: 200;
@@ -16144,6 +16147,10 @@ h1.online-artikel-single-h1-title, .online-artikel-single-h1-title.h1 {
   margin-right: 0.4em;
   display: inline-block;
 }
+.online-artikel-single-header-info-wrapper .online-artikel-single-header-meta-infobox .online-artikel-single-header-meta-info .online-artikel-tag-single-page a {
+  color: white;
+  text-decoration: none;
+}
 .online-artikel-single-header-info-wrapper .online-artikel-single-header-meta-infobox .online-artikel-single-header-meta-info .online-artikel-schau-rein {
   display: none;
 }
@@ -16236,6 +16243,25 @@ h1.online-artikel-single-h1-title, .online-artikel-single-h1-title.h1 {
 }
 #online-artikel-comments-navigation-wrapper .comment-body {
   margin-bottom: 2em;
+}
+
+/* everything pagination */
+.pagination {
+  margin-top: 0.75em;
+}
+
+.page-item.active .page-link {
+  background-color: #357362;
+  border: none;
+}
+
+.page-item:first-child .page-link,
+.page-item:last-child .page-link {
+  border-radius: 0;
+}
+
+.page-link {
+  color: #357362;
 }
 
 .has-blue-color,
