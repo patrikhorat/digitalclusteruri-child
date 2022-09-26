@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package Understrap
+ * @package digitalclusteruri
  */
 
 // Exit if accessed directly.
@@ -19,14 +19,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<div class="wrapper"  id="standard-full-width-page-wrapper">
+<div class="wrapper"  id="standard-full-width-page-wrapper-forum">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 		<div class="row">
-
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
 
@@ -45,7 +42,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</main><!-- #main -->
 
 			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+			<?php //get_template_part( 'global-templates/forum-sidebar-check' ); ?>
 
 		</div><!-- .row -->
 

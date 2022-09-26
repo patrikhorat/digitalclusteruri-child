@@ -13,26 +13,28 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		
+		<?php // the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php 	// Get the Content Box for the Forum Header
+				$contentbox = get_page_by_title( 'Forum Header', '', 'content-boxen' );
+				$contentboxid = $contentbox->ID;
+				$post_contentbox = get_post($contentboxid);
+				$content_contentbox = $post_contentbox->post_content;
+				echo do_shortcode($content_contentbox);
+		?>
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-	<div class="entry-content">
+	<div id="forum-content-wrapper">
+		<div class="entry-content-forum">
 
-		<?php
-		the_content();
-		understrap_link_pages();
-		?>
+			<?php
+			the_content();
+			understrap_link_pages();
+			?>
+		</div><!-- .entry-content -->
+		<?php get_template_part( 'global-templates/forum-sidebar-check' ); ?>
+	</div>
 
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-
-		<?php understrap_edit_post_link(); ?>
-
-	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
