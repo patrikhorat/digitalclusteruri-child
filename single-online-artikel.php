@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php
 			while ( have_posts() ) {
 				the_post();
-				get_template_part( 'loop-templates/content', 'single' );
+				get_template_part( 'loop-templates/content', 'single-online-artikel' );
 				?>
 				<div id="online-artikel-comments-navigation-wrapper">
 					<div class="online-artikel-bottom-navigation">

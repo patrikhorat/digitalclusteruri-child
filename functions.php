@@ -216,3 +216,20 @@ function my_cptui_add_post_types_to_archives( $query ) {
 	}
 }
 add_filter( 'pre_get_posts', 'my_cptui_add_post_types_to_archives' );
+
+
+
+// Add Widget
+function register_additional_childtheme_sidebars() {
+    register_sidebar( array(
+        'id'            => 'forum-sidebar',
+        'name'          => __( 'Forum Sidebar', 'child-theme-textdomain' ),
+        'description'   => __( 'Forum sidebar widget area', 'child-theme-textdomain' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+}
+  
+add_action( 'init', 'register_additional_childtheme_sidebars' );

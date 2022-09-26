@@ -16264,6 +16264,51 @@ h1.online-artikel-single-h1-title, .online-artikel-single-h1-title.h1 {
   color: #357362;
 }
 
+/* everything bbpress */
+#standard-full-width-page-wrapper-forum {
+  margin-top: 0;
+  margin-bottom: 0em;
+  background: #EDEBE3;
+}
+#standard-full-width-page-wrapper-forum h1, #standard-full-width-page-wrapper-forum .h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 700;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  background: #357362;
+  box-shadow: 0px 3px 3px #00000029;
+  margin-right: 0.4em;
+  display: inline-block;
+}
+#standard-full-width-page-wrapper-forum h2, #standard-full-width-page-wrapper-forum .h2 {
+  color: white;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+#forum-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+#forum-content-wrapper .entry-content-forum {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  #forum-content-wrapper .entry-content-forum {
+    padding-right: 30px;
+    width: 70%;
+  }
+  #forum-content-wrapper .sidebar-forum {
+    width: 30%;
+  }
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;

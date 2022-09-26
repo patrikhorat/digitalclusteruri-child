@@ -28,7 +28,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 
-					the_archive_title( '<h2 >Alles zum Thema ', '</h2>' );
+					the_archive_title( '<h2 >Alles zum Thema «', '»</h2>' );
 
 					?>
 				</header><!-- .page-header -->
@@ -42,7 +42,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						* If you want to override this in a child theme, then include a file
 						* called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						*/
-					get_template_part( 'loop-templates/content', get_post_format() );
+						get_template_part( 'loop-templates/content', 'online-artikel' );
 				}
 			} else {
 				get_template_part( 'loop-templates/content', 'none' );
