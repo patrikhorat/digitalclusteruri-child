@@ -219,7 +219,7 @@ add_filter( 'pre_get_posts', 'my_cptui_add_post_types_to_archives' );
 
 
 
-// Add Widget
+// Add Widget Area
 function register_additional_childtheme_sidebars() {
     register_sidebar( array(
         'id'            => 'forum-sidebar',
@@ -235,3 +235,192 @@ function register_additional_childtheme_sidebars() {
 add_action( 'init', 'register_additional_childtheme_sidebars' );
 
 
+/* Ajax Filtering */
+
+function vb_filter_posts() {
+
+    if( !isset( $_POST['nonce'] ) || !wp_verify_nonce( $_POST['nonce'], 'bobz' ) )
+        die('Permission denied');
+
+    /**
+     * Default response
+     */
+    $response = [
+        'status'  => 500,
+        'message' => 'Something is wrong, please try again later ...',
+        'content' => false,
+        'found'   => 0
+    ];
+
+    $tax  = sanitize_text_field($_POST['params']['tax']);
+    $term = sanitize_text_field($_POST['params']['term']);
+    $page = intval($_POST['params']['page']);
+    $qty  = intval($_POST['params']['qty']);
+
+    /**
+     * Check if term exists
+     */
+    if (!term_exists( $term, $tax) && $term != 'all-terms') :
+        $response = [
+            'status'  => 501,
+            'message' => 'Term doesn\'t exist',
+            'content' => 0
+        ];
+
+        die(json_encode($response));
+    endif;
+
+    if ($term == 'all-terms') : 
+
+        $tax_qry[] = [
+            'taxonomy' => $tax,
+            'field'    => 'slug',
+            'terms'    => $term,
+            'operator' => 'NOT IN'
+        ];
+
+    else :
+
+        $tax_qry[] = [
+            'taxonomy' => $tax,
+            'field'    => 'slug',
+            'terms'    => $term,
+        ];
+
+    endif;
+
+    /**
+     * Setup query
+     */
+    $args = [
+        'paged'          => $page,
+        'post_type'      => 'online-artikel',
+        'post_status'    => 'publish',
+        'posts_per_page' => $qty,
+        'tax_query'      => $tax_qry
+    ];
+
+    $qry = new WP_Query($args);
+
+    ob_start();
+        if ($qry->have_posts()) :
+            while ($qry->have_posts()) : $qry->the_post(); ?>
+			<?php get_template_part( 'loop-templates/content', 'online-artikel' ); ?>
+            <?php endwhile;
+
+            /**
+             * Pagination
+             */
+            vb_ajax_pager($qry,$page);
+
+            $response = [
+                'status'=> 200,
+                'found' => $qry->found_posts
+            ];
+
+            
+        else :
+
+            $response = [
+                'status'  => 201,
+                'message' => 'No posts found'
+            ];
+
+        endif;
+
+    $response['content'] = ob_get_clean();
+
+    die(json_encode($response));
+
+}
+add_action('wp_ajax_do_filter_posts', 'vb_filter_posts');
+add_action('wp_ajax_nopriv_do_filter_posts', 'vb_filter_posts');
+
+
+/**
+ * Shortocde for displaying terms filter and results on page
+ */
+function vb_filter_posts_sc($atts) {
+
+    $a = shortcode_atts( array(
+        'tax'      => 'post_tag', // Taxonomy
+        'terms'    => false, // Get specific taxonomy terms only
+        'active'   => false, // Set active term by ID
+        'per_page' => 12 // How many posts per page
+    ), $atts );
+
+    $result = NULL;
+    $terms  = get_terms($a['tax']);
+
+    if (count($terms)) :
+        ob_start(); ?>
+            <div id="container-async" data-paged="<?php echo $a['per_page']; ?>" class="sc-ajax-filter">
+                <ul class="nav-filter">
+					<li class="nav-filter-title">Tags
+					</li>
+					<li>
+                        <a href="#" data-filter="<?= $terms[0]->taxonomy; ?>" data-term="all-terms" data-page="1">
+                            Alle anzeigen
+                        </a>
+                    </li>
+                    <?php foreach ($terms as $term) : ?>
+                        <li<?php if ($term->term_id == $a['active']) :?> class="active"<?php endif; ?>>
+                            <a href="<?php echo get_term_link( $term, $term->taxonomy ); ?>" data-filter="<?php echo $term->taxonomy; ?>" data-term="<?php echo $term->slug; ?>" data-page="1">
+                                <?php echo $term->name; ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+
+                <div class="status status-online-artikel"></div>
+                <div class="content"></div>
+            </div>
+        
+        <?php $result = ob_get_clean();
+    endif;
+
+    return $result;
+}
+add_shortcode( 'ajax_filter_posts', 'vb_filter_posts_sc');
+
+
+
+/**
+ * Pagination
+ */
+function vb_ajax_pager( $query = null, $paged = 1 ) {
+
+    if (!$query)
+        return;
+
+    $paginate = paginate_links([
+        'base'      => '%_%',
+        'type'      => 'array',
+        'total'     => $query->max_num_pages,
+        'format'    => '#page=%#%',
+        'current'   => max( 1, $paged ),
+        'prev_text' => '«',
+        'next_text' => '»'
+    ]);
+
+    if ($query->max_num_pages > 1) : ?>
+        <ul class="pagination">
+            <?php foreach ( $paginate as $key => $link ) :?>
+                <li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : ''; ?>">
+						<?php echo str_replace( 'page-numbers', 'page-link', $link ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+					</li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif;
+}
+
+function assets() {
+
+    wp_enqueue_script('tuts/js', get_stylesheet_directory_uri() . '/js/ajax-filter-post.js', ['jquery'], null, true);
+
+    wp_localize_script( 'tuts/js', 'bobz', array(
+        'nonce'    => wp_create_nonce( 'bobz' ),
+        'ajax_url' => admin_url( 'admin-ajax.php' )
+    ));
+}
+add_action('wp_enqueue_scripts', 'assets', 100);

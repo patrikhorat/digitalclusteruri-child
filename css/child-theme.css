@@ -16003,6 +16003,7 @@ h4, .h4 {
 .online-artikel-excerpt {
   font-size: 1em;
   font-weight: 200;
+  margin-right: 0.75em;
 }
 .online-artikel-excerpt .online-artikel-schau-rein {
   font-size: 0.75em;
@@ -16307,6 +16308,85 @@ h1.online-artikel-single-h1-title, .online-artikel-single-h1-title.h1 {
   #forum-content-wrapper .sidebar-forum {
     width: 30%;
   }
+}
+
+.nav-filter {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.nav-filter a {
+  text-decoration: none;
+}
+.nav-filter .nav-filter-title, .nav-filter .nav-filter-title:hover {
+  margin-right: 0.5em;
+  text-transform: none;
+  background-color: transparent;
+  box-shadow: none;
+  color: #0F393A;
+  padding-left: 0px;
+}
+
+.nav-filter li {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 700;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  box-shadow: 0px 3px 3px #00000029;
+  margin-right: 0.4em;
+  margin-top: 5px;
+  margin-right: 5px;
+  list-style-type: none;
+  background: #357362;
+}
+
+.nav-filter li.active {
+  background: #EF8451;
+}
+
+.nav-filter li:hover {
+  background: #EF8451;
+}
+
+.nav-filter li a:active, .nav-filter li a:focus, .nav-filter li a:link, .nav-filter li a:visited {
+  color: white;
+}
+
+.nav-filter li a:hover {
+  color: white;
+}
+
+.nav-filter a {
+  border: none;
+}
+
+.nav li {
+  list-style-type: none;
+}
+
+.nav a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav a:active, .nav a:focus, .nav a:link, .nav a:visited {
+  color: #999;
+}
+
+.nav .current-menu-item a, .nav a:hover {
+  color: #000;
+}
+
+.status-online-artikel {
+  font-size: 1em;
+  font-weight: 700;
 }
 
 .has-blue-color,
