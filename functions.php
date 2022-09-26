@@ -233,3 +233,5 @@ function register_additional_childtheme_sidebars() {
 }
   
 add_action( 'init', 'register_additional_childtheme_sidebars' );
+
+
