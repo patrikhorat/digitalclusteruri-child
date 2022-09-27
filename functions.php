@@ -146,25 +146,6 @@ add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
 add_image_size( 'online-artikel-archive-image', 960, 600, true );
 add_image_size( 'online-artikel-single-image', 1920, 800, true );
 
-/* Read More Tag for Excerpt (Online Artikel) */
-add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' ); 
-  
-if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) { 
-	/** 
-	 * Adds a custom read more link to all excerpts, manually or automatically generated 
-	 * 
-	 * @param string $post_excerpt Posts's excerpt. 
-	 * 
-	 * @return string 
-	 */ 
-	function understrap_all_excerpts_get_more_link( $post_excerpt ) { 
-		if ( ! is_admin() ) { 
-			$post_excerpt = $post_excerpt . '...<div class="online-artikel-schau-rein" ><a href="' . esc_url( get_permalink( get_the_ID() ) ) . '">Schau rein<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>'; 
-		} 
-		return $post_excerpt; 
-	} 
-} 
-
 
 /* Online Artikel Navigation */
 if ( ! function_exists( 'understrap_post_nav' ) ) {

@@ -16062,6 +16062,9 @@ h4, .h4 {
   font-size: 1em;
   color: #EF8451;
 }
+.online-artikel-metainfo .online-artikel-metainfo-detail .online-artikel-date {
+  font-weight: 400;
+}
 
 h1.online-artikel-single-h1-title, .online-artikel-single-h1-title.h1 {
   font-size: 2.25em;

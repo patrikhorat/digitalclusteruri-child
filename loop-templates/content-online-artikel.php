@@ -40,6 +40,7 @@ defined( 'ABSPATH' ) || exit;
 				?>
 
 					<div class="online-artikel-metainfo">
+					<div class="online-artikel-metainfo-detail"><div class="online-artikel-date"><?php echo get_the_date(); ?></div></div>
 					<?php 
 						$lesezeiten = get_the_terms( $post->ID, 'lesezeit' );
 							if ($lesezeiten) {
@@ -73,8 +74,10 @@ defined( 'ABSPATH' ) || exit;
 
 					<?php
 					the_excerpt();
+					
 					//understrap_link_pages();
 					?>
+					<div class="online-artikel-schau-rein"><a href="<?php echo esc_url( get_permalink() ); ?>">Schau rein<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
 				</div>
 			</div><!-- .entry-content -->
 		</div>
