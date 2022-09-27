@@ -417,6 +417,7 @@ function vb_ajax_pager( $query = null, $paged = 1 ) {
 function assets() {
 
     wp_enqueue_script('tuts/js', get_stylesheet_directory_uri() . '/js/ajax-filter-post.js', ['jquery'], null, true);
+    wp_enqueue_script('tuts/js', get_stylesheet_directory_uri() . '/js/jquery.ba-hashchange.js', ['jquery'], null, true);
 
     wp_localize_script( 'tuts/js', 'bobz', array(
         'nonce'    => wp_create_nonce( 'bobz' ),

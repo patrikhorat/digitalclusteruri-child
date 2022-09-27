@@ -2,6 +2,22 @@
 	$doc = $(document);
 
 	$doc.ready( function() {
+		function getHashValue(key) {
+			var matches = location.hash.match(new RegExp(key+'=([^&]*)'));
+			return matches ? matches[1] : null;
+		}
+		let currenthash = location.hash;
+		let currentterm = getHashValue('tag');
+
+
+		$(window).on('hashchange', function(){
+			currenthash = location.hash;
+			currentterm = getHashValue('tag');
+			if( currenthash ) { $('a[data-term="' + currentterm +'"]').trigger('click');
+			}
+			else { 	$('a[data-term="all-terms"]').trigger('click'); }
+		}).trigger('hashchange');
+		 
 
 		/**
 		 * Retrieve posts
@@ -81,6 +97,7 @@
 				 */
 				$page = parseInt($this.attr('href').replace(/\D/g,''));
 				$this = $('.nav-filter .active a');
+				
 			}
 			
 
@@ -93,9 +110,22 @@
 
 	        // Run query
 	        get_posts($params);
+
+			location.hash = 'tag=' + $this.data('term');
+
+
 		});
 		
-		$('a[data-term="all-terms"]').trigger('click');
+
+		if( currenthash ) { $('a[data-term="' + currentterm +'"]').trigger('click');
+		}
+		else { 	$('a[data-term="all-terms"]').trigger('click'); }
+
 	});
 
 })(jQuery);
+
+
+
+
+  
