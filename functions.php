@@ -406,3 +406,8 @@ function assets() {
     ));
 }
 add_action('wp_enqueue_scripts', 'assets', 100);
+
+
+
+/* Read More remove from excerpt  */
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
