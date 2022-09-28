@@ -30,8 +30,11 @@ defined( 'ABSPATH' ) || exit;
 						}
 						echo '<div class="online-artikel-author">'.get_the_author_link().'</div>'
 						?>
-					</div>
+				</div>
 
+				<div class="online-artikel-metainfo">
+					<div class="online-artikel-metainfo-detail"><div class="online-artikel-date"><?php echo get_the_date(); ?></div></div>
+				</div>
 				<?php
 				the_title(
 					sprintf( '<h3 class="online-artikel-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
@@ -40,7 +43,6 @@ defined( 'ABSPATH' ) || exit;
 				?>
 
 					<div class="online-artikel-metainfo">
-					<div class="online-artikel-metainfo-detail"><div class="online-artikel-date"><?php echo get_the_date(); ?></div></div>
 					<?php 
 						$lesezeiten = get_the_terms( $post->ID, 'lesezeit' );
 							if ($lesezeiten) {
