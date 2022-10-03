@@ -16220,9 +16220,11 @@ h1.online-artikel-single-h1-title, .online-artikel-single-h1-title.h1 {
 #online-artikel-comments-navigation-wrapper .btn-secondary {
   background-color: #357362;
   border-color: transparent;
+  color: white;
 }
 #online-artikel-comments-navigation-wrapper .btn-secondary:hover {
   background-color: #EF8451;
+  color: white;
 }
 #online-artikel-comments-navigation-wrapper h2, #online-artikel-comments-navigation-wrapper .h2 {
   font-size: 1.25em;
