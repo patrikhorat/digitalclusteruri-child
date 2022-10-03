@@ -618,9 +618,11 @@ h1.online-artikel-single-h1-title {
     .btn-secondary {
         background-color: $dcugreenlighter;
         border-color: transparent;
+        color: white;
     }
     .btn-secondary:hover {
         background-color: $dcuorange;
+        color: white;
     }
     h2 {
         font-size: 1.25em;
