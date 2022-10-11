@@ -13,11 +13,18 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-
-
+<div class="teaser-box container">
+    <?php 	// Get the Content Box for the Forum Header
+                $contentbox = get_page_by_title( 'Teaser Box - News', '', 'content-boxen' );
+            $contentboxid = $contentbox->ID;
+            $post_contentbox = get_post($contentboxid);
+            $content_contentbox = $post_contentbox->post_content;
+            echo do_shortcode($content_contentbox);
+    ?>
+</div>
 <div class="wrapper" id="wrapper-footer">
     <div class="footerbar">
-    <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
+        <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
     </div>
     <div class="copyrightbar">
         <div class="copybrightwrapper <?php echo esc_attr( $container ); ?>">

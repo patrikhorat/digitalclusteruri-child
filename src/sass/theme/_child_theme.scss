@@ -153,7 +153,10 @@ h4 {
         color: $dcugreenlighter;
     }
 }
-
+/* main container */
+.site-main {
+    margin-bottom: 80px;
+}
 
 /* everything footer */
 #wrapper-footer {
@@ -954,7 +957,3 @@ input:focus-visible {
   
 
 
-/* Teaser Box Styling */
-.teaser-box {
-    margin-top: 80px;
-}
