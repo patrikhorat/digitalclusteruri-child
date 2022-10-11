@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
 		<div class="entry-meta online-artikel-single-header-info-wrapper">
 			<div class="online-artikel-single-header-meta-infobox">
 				<div class="online-artikel-single-header-meta-info">
-					<div class="online-artikel-tag-single-page">News</div>
+					<div class="online-artikel-tag-single-page"><a href="/news" title="News">News</a></div>
 					<div class="online-artikel-single-header-meta-info">
 						<?php the_title( '<h1 class="entry-title online-artikel-single-h1-title">', '</h1>' ); ?>
 					</div>
