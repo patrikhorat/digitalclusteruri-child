@@ -16631,7 +16631,7 @@ img.staff-member-photo {
 }*/
 /* info box styling "wp bakery" */
 .aio-icon-component {
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
 }
 
 .has-blue-color,
