@@ -998,6 +998,7 @@ input:focus-visible {
 /*  [staff-bio-formatted]  */
 .staff-member-bio {
     font-size: 14px;
+    margin-top: 10px;
 
 }
 /*  p tags within [staff-bio-formatted]  */
@@ -1011,18 +1012,20 @@ img.staff-member-photo {
 }
 /*  [staff-email-link]  */
 .staff-member-email {
-    font-weight: 200;
-    font-size: 14px;
-
+    font-weight: 400;
+    font-size: 12px;
+    text-decoration: none;
 }
 /*  [staff-name-formatted]  */
 .staff-member-listing h3.staff-member-name {
-    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-size: 16px;
 }
 /*  [staff-position-formatted]  */
 .staff-member-listing h4.staff-member-position {
-    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-size: 14px;
     font-weight: 200;
 }
