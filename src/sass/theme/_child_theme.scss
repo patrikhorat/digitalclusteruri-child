@@ -955,3 +955,80 @@ input:focus-visible {
     }
   }
   
+
+/* staff list css: ersetzt Plugin CSS */
+/*  div wrapped around entire staff list  */
+.staff-member-listing {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/*  div wrapped around each staff member  */
+.staff-member {
+    background: $backgroundcolor02;
+    box-shadow: 0px 3px 3px #00000029;
+    padding: 25px;
+    width: calc((100% - 45px)/4);
+    text-align: center;
+    min-width: 220px;
+}
+/*  Even staff member  */
+/*.staff-member.even {
+    background: $backgroundcolor02;
+} */
+/*  Odd staff member */
+/*.staff-member.odd {
+    background: white;
+} */
+/*  Last staff member  */
+.staff-member.last {
+    padding-bottom: 0;
+    border: none;
+}
+/*  Wrap around staff info  */
+.staff-member-info-wrap {
+    width: 100%;
+    margin-top: 10px;
+    /*float: left;
+    width: 70%;
+    margin-left: 3%;*/
+}
+/*  [staff-bio-formatted]  */
+.staff-member-bio {
+    font-size: 14px;
+
+}
+/*  p tags within [staff-bio-formatted]  */
+.staff-member-bio p {
+    font-weight: 200;
+    text-decoration: none;
+}
+/*  [staff-photo]  */
+img.staff-member-photo {
+    border-radius: 50%;
+}
+/*  [staff-email-link]  */
+.staff-member-email {
+    font-weight: 200;
+    font-size: 14px;
+
+}
+/*  [staff-name-formatted]  */
+.staff-member-listing h3.staff-member-name {
+    margin: 0;
+    font-size: 16px;
+}
+/*  [staff-position-formatted]  */
+.staff-member-listing h4.staff-member-position {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 200;
+}
+/* Clearfix for div.staff-member */
+/*.staff-member:after {
+    content: "";
+    display: block;
+    clear: both;
+}*/
