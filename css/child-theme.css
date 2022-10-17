@@ -16629,6 +16629,11 @@ img.staff-member-photo {
     display: block;
     clear: both;
 }*/
+/* info box styling "wp bakery" */
+.aio-icon-component {
+  margin-bottom: 10px;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
