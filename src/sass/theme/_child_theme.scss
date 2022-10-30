@@ -906,6 +906,10 @@ input:focus-visible {
 .margin-bottom-50 {
     margin-bottom: 50px;
 }
+.margin-bottom-15 {
+    margin-bottom: 15px;
+}
+
 .addthis-container {
     display: block;
     text-align: center !important;
@@ -953,8 +957,11 @@ input:focus-visible {
       @extend .addthis-container;
       text-align: left !important;
     }
-  }
-  
+}
+.addthisleft {
+    text-align: left !important;
+    margin-left: -5px;
+}  
 
 /* staff list css: ersetzt Plugin CSS */
 /*  div wrapped around entire staff list  */

@@ -411,3 +411,38 @@ add_action('wp_enqueue_scripts', 'assets', 100);
 
 /* Read More remove from excerpt  */
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+
+
+/* Everything User Roles */
+add_role('vereinsmitglied', __(
+    'Vereinsmitglied'),
+    array(
+        'read'            => true, // Allows a user to read
+        )
+ );
+
+
+ /* Create Shortcode for AddThis addthisshortcode */
+ function addthisleft15_shortcode_func() { 
+  
+// HTML code für shortcode
+$addthisleft15string .= '<div class="addthis-container margin-bottom-15 addthisleft">
+<div class="addthis_inline_share_toolbox"></div>
+</div>';
+// HTML code ausgabe
+return $addthisleft15string; 
+}
+// Register shortcode
+add_shortcode('addthisleft15', 'addthisleft15_shortcode_func'); 
+
+function addthiscenter15_shortcode_func() { 
+  
+    // HTML code für shortcode
+    $addthiscenter15string .= '<div class="addthis-container margin-bottom-15">
+    <div class="addthis_inline_share_toolbox"></div>
+    </div>';
+    // HTML code ausgabe
+    return $addthiscenter15string; 
+    }
+    // Register shortcode
+    add_shortcode('addthiscenter15', 'addthiscenter15_shortcode_func'); 

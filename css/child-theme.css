@@ -16500,6 +16500,10 @@ input:focus-visible {
   margin-bottom: 50px;
 }
 
+.margin-bottom-15 {
+  margin-bottom: 15px;
+}
+
 .addthis-container, .addthis-container__left {
   display: block;
   text-align: center !important;
@@ -16539,6 +16543,11 @@ input:focus-visible {
 }
 .addthis-container__left {
   text-align: left !important;
+}
+
+.addthisleft {
+  text-align: left !important;
+  margin-left: -5px;
 }
 
 /* staff list css: ersetzt Plugin CSS */
