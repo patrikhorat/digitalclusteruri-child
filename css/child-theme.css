@@ -15715,6 +15715,7 @@ h4, .h4 {
   font-weight: 200;
   width: 420px;
   align-items: center;
+  font-size: 12px;
 }
 #nav-bar .searchbarsection .searchbarbox .fa {
   padding-right: 0.75em;
@@ -15726,6 +15727,9 @@ h4, .h4 {
   #nav-bar .searchbarsection .searchbarbox {
     display: none;
   }
+}
+#nav-bar .searchbarsection .searchbarbox .search-submit {
+  display: none !important;
 }
 #nav-bar .navbar-toggler, #nav-bar .nav-link {
   border-color: transparent;

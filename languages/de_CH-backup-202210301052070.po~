@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
-"PO-Revision-Date: 2022-10-30 11:08+0000\n"
+"PO-Revision-Date: 2022-10-30 10:51+0000\n"
 "Last-Translator: \n"
 "Language-Team: Deutsch (Schweiz)\n"
 "Language: de_CH\n"
@@ -163,10 +163,6 @@ msgstr ""
 msgid "Default Header Image"
 msgstr ""
 
-#. Theme Name of the theme
-msgid "digitalclusteruri-child"
-msgstr ""
-
 #: inc/deprecated.php:88
 msgid "Edit"
 msgstr ""
@@ -261,7 +257,7 @@ msgstr ""
 #: searchform.php:20
 msgctxt "label"
 msgid "Search for:"
-msgstr "Suche nach:"
+msgstr ""
 
 #: inc/editor.php:50
 msgid "Lead Paragraph"
@@ -429,7 +425,7 @@ msgstr ""
 #. translators: %s: query term
 #: search.php:36
 msgid "Search Results for: %s"
-msgstr "Suchresultate für: %s"
+msgstr ""
 
 #: inc/customizer.php:114
 msgid ""
@@ -454,7 +450,7 @@ msgstr ""
 #: searchform.php:24
 msgctxt "submit button"
 msgid "Search"
-msgstr "Suchen"
+msgstr ""
 
 #. translators: %s: Tags of current post
 #: inc/template-tags.php:68
@@ -485,6 +481,10 @@ msgstr ""
 #. translators: %1$s: smiley
 #: 404.php:69
 msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#. Theme Name of the theme
+msgid "Understrap"
 msgstr ""
 
 #. translators: Theme version

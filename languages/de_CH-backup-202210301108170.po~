@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
-"PO-Revision-Date: 2022-10-30 11:08+0000\n"
+"PO-Revision-Date: 2022-10-30 11:06+0000\n"
 "Last-Translator: \n"
 "Language-Team: Deutsch (Schweiz)\n"
 "Language: de_CH\n"
@@ -429,7 +429,7 @@ msgstr ""
 #. translators: %s: query term
 #: search.php:36
 msgid "Search Results for: %s"
-msgstr "Suchresultate für: %s"
+msgstr ""
 
 #: inc/customizer.php:114
 msgid ""
