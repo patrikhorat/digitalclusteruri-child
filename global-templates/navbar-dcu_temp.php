@@ -44,7 +44,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<!-- search bar -->
 		<div class="searchbarsection nav-bar-item">
 			<div class="searchbarbox">
-				<i class="fa fa-search"></i><?php get_search_form(); ?>
+				<i class="fa fa-search"></i><input type="text" placeholder="Was suchst du?">
 			</div>
 		</div>
 		<!-- end search bar -->

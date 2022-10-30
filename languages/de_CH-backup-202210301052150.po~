@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: understrap\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
-"PO-Revision-Date: 2022-09-18 14:56+0000\n"
+"PO-Revision-Date: 2022-10-30 10:52+0000\n"
 "Last-Translator: \n"
 "Language-Team: Deutsch (Schweiz)\n"
 "Language: de_CH\n"
@@ -42,7 +42,7 @@ msgstr ""
 "X-Poedit-SearchPath-19: functions.php\n"
 "X-Poedit-SearchPath-20: page-templates\n"
 "X-Poedit-SearchPath-21: inc\n"
-"X-Loco-Version: 2.6.2; wp-6.0.2"
+"X-Loco-Version: 2.6.3; wp-6.0.3"
 
 #: inc/template-tags.php:73
 msgid "% Comments"
@@ -257,7 +257,7 @@ msgstr ""
 #: searchform.php:20
 msgctxt "label"
 msgid "Search for:"
-msgstr ""
+msgstr "Suche nach:"
 
 #: inc/editor.php:50
 msgid "Lead Paragraph"
@@ -335,7 +335,7 @@ msgstr ""
 #: searchform.php:22
 msgctxt "placeholder"
 msgid "Search &hellip;"
-msgstr ""
+msgstr "Was suchst du?"
 
 #: inc/template-tags.php:42
 msgctxt "post author"
@@ -372,7 +372,7 @@ msgstr ""
 
 #: inc/pagination.php:57
 msgid "Posts navigation"
-msgstr ""
+msgstr "Online Artikel Navigation"
 
 #: inc/deprecated.php:81
 msgid "Previous"
