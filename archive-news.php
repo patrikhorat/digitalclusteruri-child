@@ -31,6 +31,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					the_archive_title( '<h2 >Alle ', '</h2>' );
 
 					?>
+					<div class="addthis-container margin-bottom-15 addthisleft">
+						<div class="addthis_inline_share_toolbox"></div>
+					</div>
 				</header><!-- .page-header -->
 				<?php  
 				//Start the loop.
@@ -51,7 +54,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</main><!-- #main -->
 		<div class="teaser-box">
-		<?php 	// Get the Content Box for the Forum Header
+		<?php 	// Get the Content Box
 				$contentbox = get_page_by_title( 'Teaser Box - News Archiv', '', 'content-boxen' );
 				$contentboxid = $contentbox->ID;
 				$post_contentbox = get_post($contentboxid);
