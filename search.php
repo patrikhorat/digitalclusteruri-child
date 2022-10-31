@@ -14,33 +14,31 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<div class="wrapper" id="search-wrapper">
+<div class="wrapper" id="standard-full-width-page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 		<div class="row">
 
-			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
-
-			<main class="site-main" id="main">
+						<main class="site-main" id="main">
 
 				<?php if ( have_posts() ) : ?>
 
 					<header class="page-header">
 
-							<h1 class="page-title">
+							<h1 class="page-title">Suchresultate für: 
 								<?php
 								printf(
-									/* translators: %s: query term */
-									esc_html__( 'Search Results for: %s', 'understrap' ),
 									'<span>' . get_search_query() . '</span>'
 								);
 								?>
 							</h1>
+							<h2>Nicht fündig geworden? Dann können Sie uns gerne kontaktieren.</h2>
 
 					</header><!-- .page-header -->
-
+					<div class="search-bar-search-page">
+						<?php get_search_form(); ?>
+					</div>
 					<?php /* Start the Loop */ ?>
 					<?php
 					while ( have_posts() ) :
@@ -66,8 +64,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<!-- The pagination component -->
 			<?php understrap_pagination(); ?>
 
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
 		</div><!-- .row -->
 

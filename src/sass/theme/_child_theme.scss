@@ -283,13 +283,6 @@ h4 {
     padding-bottom: 0px;
 }
 
-/* page templates remove h1 page title and entry footer */
-.page .entry-title, .entry-footer {
-    display: none;
-    }
-
-
-
 /* buttons: use grey flat button in wpbakery  */
 .vc_btn3-container {
     margin-right: 0.75em;
@@ -1051,4 +1044,36 @@ img.staff-member-photo {
 /* info box styling "wp bakery" */
 .aio-icon-component {
     margin-bottom: 10px !important;
+}
+
+/* Suche / Suchfeld */
+.btn-primary {
+    background-color: $dcugreenlighter;
+    border-color: transparent;
+}
+.btn-primary:hover {
+    background-color: $dcuorange;
+    border-color: transparent;
+}
+.form-control {
+    border-color: $dcugreenlighter;
+}
+
+/* Suchresultate */
+
+.search-result-box {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid #d5d5d5;
+}
+.search-result-box:first-of-type {
+    margin-top: 25px;
+}
+.search-result-box:last-child {
+    border-bottom: 1px solid #d5d5d5;
+}
+.search-bar-search-page {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    max-width: 500px;
 }
