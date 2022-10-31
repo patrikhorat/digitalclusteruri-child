@@ -16696,6 +16696,14 @@ img.staff-member-photo {
   max-width: 500px;
 }
 
+/* Teaser Box */
+.teaser-box {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
