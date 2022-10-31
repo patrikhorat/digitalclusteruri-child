@@ -443,3 +443,25 @@ return '<div class="addthis-container margin-bottom-15">
 }
 // Register shortcode
 add_shortcode('addthiscenter15', 'addthiscenter15_shortcode_func'); 
+
+
+// Search form
+function search_form_shortcode( ) {
+    get_search_form( );
+}
+ add_shortcode('search_form', 'search_form_shortcode');
+
+ // Excerpt für Seiten
+ add_post_type_support( 'page', 'excerpt' );
+
+ // content-boxen von Suche ausschliessen
+ add_action( 'init', 'exclude_cpt_search_filter', 99 );
+ function exclude_cpt_search_filter() {
+     global $wp_post_types;
+ 
+     if ( post_type_exists( 'content-boxen' ) ) {
+ 
+         // exclude from search results
+         $wp_post_types['content-boxen']->exclude_from_search = true;
+     }
+ }
