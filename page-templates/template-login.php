@@ -40,7 +40,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php
 			} 
 			else {
-				echo '<p>Du bist bereits angemeldet! Clicke <a href="'. get_site_url() . '">hier</a> um auf die Homepage zu gelangen.</p>';
+				echo '<p>Du bist bereits angemeldet! Clicke <a href="'. get_home_url() . '">hier</a> um auf die Homepage zu gelangen.</p>';
 			}
 			?>
 
