@@ -99,7 +99,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="vc_btn3-container  is-style-fill dark vc_btn3-inline"><a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-color-grey" href="<?php get_site_url();?>/login/" title="einloggen">einloggen</a></div>
 					</div>
 				<?php } else {
-				echo "Registration is currently disabled. Please try again later."; 
+				echo "Die Registrierung ist momentan deaktiviert."; 
 				}
 				} ?>
 				<?php 
