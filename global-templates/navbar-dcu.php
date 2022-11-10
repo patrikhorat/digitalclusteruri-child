@@ -54,20 +54,34 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</button>
 
 		<!-- The WordPress Menu goes here -->
-		<?php
-		wp_nav_menu(
-			array(
-				'theme_location'  => 'primary',
-				'container_class' => 'collapse navbar-collapse',
-				'container_id'    => 'navbarNavDropdown',
-				'menu_class'      => 'navbar-nav ms-auto',
-				'fallback_cb'     => '',
-				'menu_id'         => 'main-menu',
-				'depth'           => 2,
-				'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-			)
-		);
-		?>
+		<div id="navbarNavDropdown" class="collapse navbar-collapse">
+			<ul id="main-menu" class="navbar-nav ms-auto">
+				<?php
+				//$items_wrap .= sprintf( '<li id="searchItem">%1$s</li></ul>');
+				wp_nav_menu(
+					array(
+						'items_wrap'      => '%3$s',
+						'container'			=> "",
+						'theme_location'  => 'primary',
+						//'container_class' => 'collapse navbar-collapse',
+						//'container_id'    => 'navbarNavDropdown',
+						//'menu_class'      => 'navbar-nav ms-auto',
+						'fallback_cb'     => '',
+						//'menu_id'         => 'main-menu',
+						'depth'           => 2,
+						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+					)
+				);
+				?>
+				<?php
+					if ( !is_user_logged_in() ) {
+						print ( '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-logout" class="linkbutton menu-item menu-item-type-post_type menu-item-object-page page_item page-item-logout nav-item"><a title="Logout" href="' . get_site_url() .'/login/" class="nav-link" aria-current="page">Login</a></li>');
+					} else {
+						print ( '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-logout" class="linkbutton menu-item menu-item-type-post_type menu-item-object-page page_item page-item-logout nav-item"><a title="Logout" href="'. wp_logout_url() .'" class="nav-link" aria-current="page">Logout</a></li>');
+					}
+					?>
+			</ul>
+		</div>
 
 	</div><!-- .container(-fluid) -->
 
