@@ -1085,3 +1085,58 @@ img.staff-member-photo {
     padding-top: 0px;
     padding-bottom: 0px;
 }
+
+
+/* Login / Registration Styling */
+#dcu-login-box {
+    p.login-username, p.login-password {
+        margin-bottom: 8px;
+    }
+    .login-username, .login-password, .login-email {    
+        label {
+            width: 140px;
+        }
+        input {
+            font-size: 12px;
+            font-weight: 300;
+            width: 260px;
+            border-radius: 0.25rem;
+            border: 1px solid $dcugreenlighter;
+        }
+    }
+    .button {
+        color: white;
+        background: $dcugreenlighter;
+        border: none;
+        border-radius:0.3em !important;
+        padding: 0.75em 2.25em !important;
+        text-transform: uppercase;
+        font-size: 12px !important;;
+        font-weight: 700;
+        box-shadow: 0px 3px 3px #00000029;
+        line-height: 1rem;
+    }
+    .button:hover {
+        background: $dcuorange;
+    }
+}
+.nochkeinkonto, .schoneinkonto {
+    margin-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    p {
+        margin: 0px;
+    }
+    .vc_btn3-container {
+        margin-top: 5px;
+
+    }
+}
+.register-error {
+    font-size: 12px;
+    color: $dcuorange;
+    font-weight: 700;
+}
+.register-error:last-child {
+    margin-bottom: 15px;
+}

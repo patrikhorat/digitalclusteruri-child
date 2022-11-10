@@ -465,3 +465,38 @@ function search_form_shortcode( ) {
          $wp_post_types['content-boxen']->exclude_from_search = true;
      }
  }
+
+ /* Language Selector Dissable on Login Page */
+ add_filter( 'login_display_language_dropdown', '__return_false' );
+
+
+/* Login Error Handling */
+function error_handler($user) {
+    $login_page  = home_url( '/login' );
+    global $errors;
+    
+    $err_codes = $errors->get_error_codes(); // get WordPress built-in error codes
+    $_SESSION["err_codes"] =  $err_codes;
+
+    wp_redirect( $login_page ); // keep users on the same page
+    exit;
+}
+add_filter( 'login_errors', 'error_handler');
+
+/* Logout Redirect - Weiterleitung zur Startseite nach dem Ausloggen*/
+function redirect_after_logout(){
+    wp_redirect( home_url() );
+    exit();
+}
+add_action('wp_logout', 'redirect_after_logout');
+
+
+/* Admin Bar verstecken */
+add_action('after_setup_theme', 'remove_admin_bar');
+function remove_admin_bar() {
+if (!current_user_can('administrator') && !is_admin() && !current_user_can('editor') && !current_user_can('author') && !current_user_can('contributor')) {
+  show_admin_bar(false);
+}
+}
+
+
