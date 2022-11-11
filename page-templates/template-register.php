@@ -95,8 +95,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</p>
 					</form>
 					<div class="schoneinkonto">
-						<p><b>Hast du bereits ein Konto?</b> Dann kannst du ich hier:</a></p>
-						<div class="vc_btn3-container  is-style-fill dark vc_btn3-inline"><a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-color-grey" href="<?php get_home_url();?>/login/" title="einloggen">einloggen</a></div>
+						<p><b>Hast du bereits ein Konto?</b> Dann kannst du dich hier <a href="<?php get_home_url();?>/login/" title="einloggen">einloggen</a>.</p>
 					</div>
 				<?php } else {
 				echo "Die Registrierung ist momentan deaktiviert."; 
