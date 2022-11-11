@@ -65,7 +65,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					$random_password = wp_generate_password( 12, false ); 
 					$status = wp_create_user( $username, $random_password, $email ); 
 						if ( is_wp_error($status) ) {
-						echo '<div class="register-error">Der Benutzername existiert bereits.</div>'; 
+						echo '<div class="register-error">Es existiert bereits ein Konto mit dieser E-Mail oder diesem Benutzernamen.</div>'; 
 						} else {
 						$from = get_option('admin_email'); 
 						$headers = 'From: '.$from . "\r\n"; 
@@ -73,7 +73,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						$message = "Registrierung erfolgreich.\nDeine Login-Details\nBenutzername: $username\nPasswort: $random_password"; 
 						// Email password and other details to the user
 						wp_mail( $email, $subject, $message, $headers ); 
-						echo "Bitte prüfe deine E-Mails für die Login-Details."; 
+						echo 'Bitte prüfe deine E-Mails für die <a href="'.  get_site_url().'/login/" title="Login">Login</a>-Details.'; 
 						$error = 2; // We will check for this variable before showing the sign up form. 
 						}
 					}
