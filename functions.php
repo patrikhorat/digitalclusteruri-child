@@ -470,7 +470,7 @@ function search_form_shortcode( ) {
  add_filter( 'login_display_language_dropdown', '__return_false' );
 
 
-/* Login Error Handling */
+/* Login Error Handling 
 function error_handler($user) {
     $login_page  = home_url( '/login' );
     global $errors;
@@ -481,7 +481,7 @@ function error_handler($user) {
     wp_redirect( $login_page ); // keep users on the same page
     exit;
 }
-add_filter( 'login_errors', 'error_handler');
+add_filter( 'login_errors', 'error_handler');*/
 
 /* Logout Redirect - Weiterleitung zur Startseite nach dem Ausloggen*/
 function redirect_after_logout(){
