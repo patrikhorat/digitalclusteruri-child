@@ -31,7 +31,8 @@ defined( 'ABSPATH' ) || exit;
 			understrap_link_pages();
 			?>
 		</div><!-- .entry-content -->
-		<?php get_template_part( 'global-templates/forum-sidebar-check' ); ?>
+		<?php // Forum Sidebar deaktiviert
+		// get_template_part( 'global-templates/forum-sidebar-check' ); ?>
 	</div>
 
 
