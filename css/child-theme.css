@@ -16308,12 +16308,14 @@ h1.online-artikel-single-h1-title, .online-artikel-single-h1-title.h1 {
   width: 100%;
 }
 @media (min-width: 992px) {
+  #forum-content-wrapper {
+    /*.sidebar-forum {
+        width: 30%;
+    }*/
+  }
   #forum-content-wrapper .entry-content-forum {
     padding-right: 30px;
-    width: 70%;
-  }
-  #forum-content-wrapper .sidebar-forum {
-    width: 30%;
+    width: 100%;
   }
 }
 
