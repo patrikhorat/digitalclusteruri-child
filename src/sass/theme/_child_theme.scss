@@ -703,11 +703,11 @@ h1.online-artikel-single-h1-title {
     @media (min-width: $mediumscreen){
         .entry-content-forum {
             padding-right: 30px;
-            width: 70%;
+            width: 100%;
         }
-        .sidebar-forum {
+        /*.sidebar-forum {
             width: 30%;
-        }
+        }*/
     }
 
 }
