@@ -36,7 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			?>
 			<div class="nochkeinkonto">
 				<p><b>Hast du noch kein Konto?</b> Dann kannst du dich hier <a href="<?php get_site_url();?>/registrieren/" title="registrieren">registrieren</a>.</p>
-				<p><b>Hast du dein Passwort vergessen?</b> <a href="<?php site_url();?>/wp-login.php?action=lostpassword" target="_blank" title="Passwort vergessen">Hier</a> kannst du es zurück setzen.</p>
+				<p><b>Hast du dein Passwort vergessen?</b> <a href="<?php echo esc_url( wp_lostpassword_url() );?>" target="_blank" title="Passwort vergessen">Hier</a> kannst du es zurück setzen.</p>
 			</div>
 			<?php
 			} 
