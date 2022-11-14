@@ -15761,6 +15761,46 @@ h4, .h4 {
 #nav-bar a.nav-link {
   color: #357362;
 }
+#nav-bar .menu-search-box-mobile {
+  justify-content: left;
+  width: 100%;
+  flex: 1;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+#nav-bar .menu-search-box-mobile form {
+  width: 100%;
+}
+#nav-bar .menu-search-box-mobile .searchbarbox {
+  height: 27px;
+  background: #EDEBE3;
+  color: #357362;
+  display: flex;
+}
+#nav-bar .menu-search-box-mobile .searchbarbox input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-family: "stolzl", sans-serif;
+  font-weight: 200;
+  width: 100%;
+  align-items: center;
+  font-size: 12px;
+}
+#nav-bar .menu-search-box-mobile .searchbarbox .fa {
+  padding-right: 0.75em;
+  padding-left: 0.4em;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  #nav-bar .menu-search-box-mobile .searchbarbox {
+    display: none;
+  }
+}
+#nav-bar .menu-search-box-mobile .searchbarbox .search-submit {
+  display: none !important;
+}
 
 /* main container */
 .site-main {

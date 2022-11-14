@@ -81,6 +81,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 					}
 					?>
 			</ul>
+			<div class="menu-search-box-mobile">
+				<div class="searchbarbox">
+					<i class="fa fa-search"></i><?php get_search_form(); ?>
+				</div>
+			</div>
 		</div>
 
 	</div><!-- .container(-fluid) -->

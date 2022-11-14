@@ -156,6 +156,44 @@ h4 {
     a.nav-link {
         color: $dcugreenlighter;
     }
+    .menu-search-box-mobile {
+        justify-content: left;
+        width: 100%;
+        flex:1;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        form {
+            width: 100%;
+        }
+        .searchbarbox {
+            height: 27px;
+            background: $backgroundcolor02;
+            color: $dcugreenlighter;
+            display: flex;
+            input {
+                border: none;
+                background-color: transparent;
+                outline: none;
+                font-family: "stolzl", sans-serif;
+                font-weight: 200;
+                width: 100%;
+                align-items: center;
+                font-size: 12px;
+            }
+            .fa {
+                padding-right: 0.75em; 
+                padding-left: 0.4em;
+                display: flex;
+                align-items: center;
+            }
+            @media(min-width: $smallscreen) {
+                display: none;
+            }
+            .search-submit {
+                display: none !important;
+            }
+        }
+    }
 }
 /* main container */
 .site-main {
