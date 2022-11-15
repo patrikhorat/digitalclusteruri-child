@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: understrap\n"
+"Project-Id-Version: digitalclusteruri-child\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/understrap\n"
 "POT-Creation-Date: 2021-08-20T00:31:53+00:00\n"
 "PO-Revision-Date: 2022-10-31 09:29+0000\n"

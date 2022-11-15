@@ -2,7 +2,7 @@
 /**
  * Search results partial template
  *
- * @package Understrap
+ * @package digitalclusteruri-child
  */
 
 // Exit if accessed directly.

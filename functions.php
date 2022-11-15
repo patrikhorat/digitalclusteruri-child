@@ -2,7 +2,7 @@
 /**
  * digitalclusteruri Child Theme functions and definitions
  *
- * @package digitalclusteruri
+ * @package digitalclusteruri-child
  */
 
 // Exit if accessed directly.
