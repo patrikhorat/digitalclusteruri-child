@@ -454,7 +454,7 @@ function search_form_shortcode( ) {
  // Excerpt für Seiten
  add_post_type_support( 'page', 'excerpt' );
 
- // content-boxen von Suche ausschliessen
+ // content-boxen und staff-member von Suche ausschliessen
  add_action( 'init', 'exclude_cpt_search_filter', 99 );
  function exclude_cpt_search_filter() {
      global $wp_post_types;
@@ -463,6 +463,7 @@ function search_form_shortcode( ) {
  
          // exclude from search results
          $wp_post_types['content-boxen']->exclude_from_search = true;
+         $wp_post_types['staff-member']->exclude_from_search = true;
      }
  }
 
@@ -534,3 +535,5 @@ if (!current_user_can('administrator') && !is_admin() && !current_user_can('edit
 }
 
 
+/* Staff Member Archiv Deaktivieren */
+add_filter( 'sslp_enable_staff_member_archive', '__return_false' );
