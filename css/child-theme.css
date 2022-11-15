@@ -15768,6 +15768,11 @@ h4, .h4 {
   margin-top: 15px;
   margin-bottom: 5px;
 }
+@media (min-width: 768px) {
+  #nav-bar .menu-search-box-mobile {
+    display: none;
+  }
+}
 #nav-bar .menu-search-box-mobile form {
   width: 100%;
 }
@@ -15792,11 +15797,6 @@ h4, .h4 {
   padding-left: 0.4em;
   display: flex;
   align-items: center;
-}
-@media (min-width: 768px) {
-  #nav-bar .menu-search-box-mobile .searchbarbox {
-    display: none;
-  }
 }
 #nav-bar .menu-search-box-mobile .searchbarbox .search-submit {
   display: none !important;
