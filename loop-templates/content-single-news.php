@@ -40,20 +40,6 @@ defined( 'ABSPATH' ) || exit;
 		<?php
 		the_content();
 		?>
-		<footer class="entry-footer">
-
-		<?php understrap_entry_footer();
-		understrap_post_nav();
-		// If comments are open or we have at least one comment, load up the comment template.
-		if ( comments_open() || get_comments_number() ) :
-			comments_template();
-		endif;
-
-		
-		
-		?>
-
-		</footer><!-- .entry-footer -->
 	</div><!-- .entry-content -->
 
 	

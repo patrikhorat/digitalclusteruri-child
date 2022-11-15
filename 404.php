@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (not found)
  *
- * @package digitalclusteruri
+ * @package digitalclusteruri-child
  */
 
 // Exit if accessed directly.
