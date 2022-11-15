@@ -162,6 +162,9 @@ h4 {
         flex:1;
         margin-top: 15px;
         margin-bottom: 5px;
+        @media(min-width: $smallscreen) {
+            display: none;
+        }
         form {
             width: 100%;
         }
@@ -185,9 +188,6 @@ h4 {
                 padding-left: 0.4em;
                 display: flex;
                 align-items: center;
-            }
-            @media(min-width: $smallscreen) {
-                display: none;
             }
             .search-submit {
                 display: none !important;
