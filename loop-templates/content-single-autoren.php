@@ -1,6 +1,6 @@
 <?php
 /**
- * Partial template for content in page.php
+ * Single post partial template
  *
  * @package digitalclusteruri
  */
@@ -10,8 +10,6 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-	<?php //echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 	<div class="entry-content">
 
