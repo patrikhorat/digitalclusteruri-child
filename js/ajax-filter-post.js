@@ -68,7 +68,8 @@
 	            	}
 
 	            	$status.text('Anzahl Online Artikel: ' + msg);
-	            	$('html, body').animate({ scrollTop: 0 }, "fast");
+	            	/* Scroll to top after Page Turn*/
+					$('html, body').animate({ scrollTop: 0 }, "fast");
 	            	/*console.log(data);
 	            	console.log(textStatus);*/
 	            }
