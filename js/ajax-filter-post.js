@@ -26,7 +26,7 @@
 
 			$container = $('#container-async');
 			$content   = $container.find('.content');
-	        	$status    = $container.find('.status');
+	        $status    = $container.find('.status');
 
 			$status.text('Lädt...');
 
@@ -68,7 +68,7 @@
 	            	}
 
 	            	$status.text('Anzahl Online Artikel: ' + msg);
-	            	
+	            	$('html, body').animate({ scrollTop: 0 }, "fast");
 	            	/*console.log(data);
 	            	console.log(textStatus);*/
 	            }
