@@ -31,7 +31,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 				'label_password' => __( 'Passwort' ),
 				'label_remember' => __( 'Angemeldet bleiben' )
 			);
-
+			$login = (isset($_GET['login']) ) ? $_GET['login'] : 0;
+			if ($login === "failed"){ ?>
+			<div class="register-error">Der Benutzername oder das Kennwort ist falsch.</div>
+			<?php 
+			};
+			
 			wp_login_form( $args );
 			?>
 			<div class="nochkeinkonto">
@@ -41,7 +46,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php
 			} 
 			else {
-				echo '<p>Du bist bereits angemeldet! Clicke <a href="'. get_home_url() . '">hier</a> um auf die Homepage zu gelangen.</p>';
+				echo '<p>Du bist bereits angemeldet! Klicke <a href="'. get_home_url() . '">hier</a> um auf die Homepage zu gelangen.</p>';
 			}
 			?>
 
