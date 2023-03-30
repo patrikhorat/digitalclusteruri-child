@@ -1,0 +1,64 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
+
+
+$dcugreen: #0F393A; // Thats a sample how you could change a BootStrap variable.
+$dcugreenlighter: #357362;
+$dcuorange: #EF8451;
+$primary: $dcugreen;  // Once we've changed the value, we'll also make it the primary brand color.
+$secondary: #EF8451;
+$backgroundcolor01: #FFFFFF;
+$backgroundcolor02: #EDEBE3;
+$shadowbg01: #00000029;
+
+
+/* screen / container sizes */
+$extralargescreen: 1400px;
+$extralargescreencontainer: 1320px;
+$largescreen: 1200px;
+$largescreencontainer: 1140px;
+$mediumscreen: 992px;
+$mediumscreencontainer: 960px;
+$smallscreen: 768px;
+$smallscreencontainer: 720px;
+$extrasmallscreen: 576px;
+$extrasmallscreencontainer: 540px;
+
+
+/* Mixin Settings */
+$media-direction:       min;
+$breakpoints: (
+  'default':            '',
+  'xs':                 576px,
+  's':                  768px,
+  'm':                  992px,
+  'l':                  1200px,
+  'xl':                 1400px,
+);
+@mixin breakpoint($breakpoint,$direction: $media-direction) {
+
+    // Es wird gecheckt ob der Wert in der Sass Map vorhanden ist
+    @if map-has-key($breakpoints, $breakpoint) {
+  
+      // Ausgabe
+      @media (#{$direction}-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+      }
+    }
+  
+    // Wenn ihr oben einen Wert eingetragen habt wird hier gecheckt ob ihr einen Einheit angehängt habt. Falls nicht wird px genutzt.
+    @else if unitless($breakpoint) {
+      $breakpoint: $breakpoint + 0px;
+  
+      // Ausgabe
+      @media (#{$direction}-width: $breakpoint) {
+        @content;
+      }
+    }
+  };
+
+// Diverses
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$headings-font-weight: 500 !default;
+$h1-font-size: $font-size-base * 2.5 !default;
