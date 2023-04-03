@@ -14792,59 +14792,79 @@ h4, .h4 {
   padding-bottom: 0px;
 }
 
-/* buttons: use grey flat button in wpbakery  */
+/* buttons: use classic and rounded button in wpbakery  */
 .vc_btn3-container {
   margin-right: 0.75em;
   margin-top: 1.2em;
   margin-bottom: 1.2em;
 }
-.vc_btn3-container .vc_btn3.vc_btn3-color-grey.vc_btn3-style-flat {
+.vc_btn3-container .vc_btn3-style-classic {
   border-radius: 0.3em !important;
   font-size: 0.75em !important;
   padding: 0.75em 2.25em !important;
   text-transform: uppercase;
   font-weight: 700;
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1607843137);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1607843137) !important;
 }
 
-.vc_btn3-container.is-style-fill.dark .vc_btn3.vc_btn3-color-grey.vc_btn3-style-flat {
-  background-color: #357362;
-  color: white;
-}
-.vc_btn3-container.is-style-fill.dark .vc_btn3.vc_btn3-color-grey.vc_btn3-style-flat:hover {
-  background-color: #EF8451;
-  color: white;
+.vc_btn3-color-btn-digitalclusteruri-darkgreen {
+  background-color: #0F393A !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
 }
 
-.vc_btn3-container.is-style-fill.light .vc_btn3.vc_btn3-color-grey.vc_btn3-style-flat {
-  background-color: white;
-  color: #357362;
-}
-.vc_btn3-container.is-style-fill.light .vc_btn3.vc_btn3-color-grey.vc_btn3-style-flat:hover {
-  background-color: #357362;
-  color: white;
+.vc_btn3-color-btn-digitalclusteruri-darkgreen:hover {
+  background-color: #EF8451 !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
 }
 
-.vc_btn3-container.is-style-outline.dark .vc_btn3.vc_btn3-color-grey.vc_btn3-style-flat {
-  color: #357362;
-  background: transparent;
-  border: 1px solid;
-}
-.vc_btn3-container.is-style-outline.dark .vc_btn3.vc_btn3-color-grey.vc_btn3-style-flat:hover {
-  color: #EF8451;
-  background: transparent;
-  border: 1px solid;
+.vc_btn3-color-btn-digitalclusteruri-lightgreen {
+  background-color: #357362 !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
 }
 
-.vc_btn3-container.is-style-outline.light .vc_btn3.vc_btn3-color-grey.vc_btn3-style-flat {
-  color: white;
-  background: transparent;
-  border: 1px solid;
+.vc_btn3-color-btn-digitalclusteruri-lightgreen:hover {
+  background-color: #EF8451 !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
 }
-.vc_btn3-container.is-style-outline.light .vc_btn3.vc_btn3-color-grey.vc_btn3-style-flat:hover {
-  color: #357362;
-  background: transparent;
-  border: 1px solid;
+
+.vc_btn3-color-btn-digitalclusteruri-orange {
+  background-color: #EF8451 !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+}
+
+.vc_btn3-color-btn-digitalclusteruri-orange:hover {
+  background-color: #357362 !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+}
+
+.vc_btn3-color-btn-digitalclusteruri-white {
+  background-color: #ffffff !important;
+  border-color: transparent !important;
+  color: #357362 !important;
+}
+
+.vc_btn3-color-btn-digitalclusteruri-white:hover {
+  background-color: #357362 !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+}
+
+.vc_btn3-color-btn-digitalclusteruri-lightgray {
+  background-color: #EDEBE3 !important;
+  border-color: transparent !important;
+  color: #0F393A !important;
+}
+
+.vc_btn3-color-btn-digitalclusteruri-lightgray:hover {
+  background-color: #0F393A !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
 }
 
 /* wpbakery customization */

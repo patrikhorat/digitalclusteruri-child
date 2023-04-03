@@ -537,3 +537,53 @@ if (!current_user_can('administrator') && !is_admin() && !current_user_can('edit
 
 /* Staff Member Archiv Deaktivieren */
 add_filter( 'sslp_enable_staff_member_archive', '__return_false' );
+
+
+
+/* Button Colors Selection */  
+add_action( 'vc_after_init', 'change_vc_button_colors' );
+ 
+function change_vc_button_colors() {
+	
+	//Get current values stored in the color param in "Call to Action" element
+		$param = WPBMap::getParam( 'vc_btn', 'color' );
+	
+	// Add New Colors to the 'value' array
+	// btn-custom-1 and btn-custom-2 are the new classes that will be 
+	// applied to your buttons, and you can add your own style declarations
+	// to your stylesheet to style them the way you want.
+		$param['value'][__( 'DCU Dark Green', 'digitalclusteruri-child' )] = 'btn-digitalclusteruri-darkgreen';
+		$param['value'][__( 'DCU Light Green', 'digitalclusteruri-child' )] = 'btn-digitalclusteruri-lightgreen';
+        $param['value'][__( 'DCU White', 'digitalclusteruri-child' )] = 'btn-digitalclusteruri-white';
+        $param['value'][__( 'DCU Light Gray', 'digitalclusteruri-child' )] = 'btn-digitalclusteruri-lightgray';
+        $param['value'][__( 'DCU Orange', 'digitalclusteruri-child' )] = 'btn-digitalclusteruri-orange';
+	
+	// Remove any colors you don't want to use.
+		unset($param['value']['Classic Grey']);
+		unset($param['value']['Classic Blue']);
+		unset($param['value']['Classic Turquoise']);
+		unset($param['value']['Classic Green']);
+		unset($param['value']['Classic Orange']);
+		unset($param['value']['Classic Red']);
+		unset($param['value']['Classic Black']);
+		unset($param['value']['Blue']);
+		unset($param['value']['Turquoise']);
+		unset($param['value']['Pink']);
+		unset($param['value']['Violet']);
+		unset($param['value']['Peacoc']);
+		unset($param['value']['Chino']);
+		unset($param['value']['Mulled Wine']);
+		unset($param['value']['Vista Blue']);
+		unset($param['value']['Black']);
+		unset($param['value']['Grey']);
+		unset($param['value']['Orange']);
+		unset($param['value']['Sky']);
+		unset($param['value']['Green']);
+		unset($param['value']['Juicy pink']);
+		unset($param['value']['Sandy brown']);
+		unset($param['value']['Purple']);
+		unset($param['value']['White']);
+	
+	// Finally "update" with the new values
+		vc_update_shortcode_param( 'vc_btn', $param );
+}
