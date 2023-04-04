@@ -15,7 +15,7 @@ get_header();
 $container = get_theme_mod( 'digitalclusteruri_container_type' );
 ?>
 
-<div class="wrapper" id="standard-full-width-page-wrapper-archive">
+<div class="wrapper" id="standard-full-width-page-wrapper-archive-tag">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
