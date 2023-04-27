@@ -4,6 +4,10 @@ body {
     background: $backgroundcolor01;
     color: $dcugreen;
 }
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
 
 p {
     font-weight: 200;
