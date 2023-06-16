@@ -1312,3 +1312,12 @@ img.staff-member-photo {
 .hashtaglistbuttons .vc_btn3-container .vc_btn3-style-classic {
     box-shadow: none !important;
 }
+
+.padding-desktop {
+    @media(max-width: $largescreen) {
+        padding: 4rem;
+    }
+    @media(max-width: $mediumscreen) {
+        padding: 3rem;
+    }
+}

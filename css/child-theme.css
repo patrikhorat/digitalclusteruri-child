@@ -15783,6 +15783,17 @@ img.staff-member-photo {
   box-shadow: none !important;
 }
 
+@media (max-width: 1200px) {
+  .padding-desktop {
+    padding: 4rem;
+  }
+}
+@media (max-width: 992px) {
+  .padding-desktop {
+    padding: 3rem;
+  }
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
