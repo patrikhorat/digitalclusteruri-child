@@ -23,10 +23,10 @@ $navbar_type       = get_theme_mod( 'digitalclusteruri_navbar_type', 'collapse' 
 
 
 	<?php wp_head(); ?>
+	<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=648c6e229c28110012954ddc&product=sop' async='async'></script>
 </head>
 
 <body <?php body_class(); ?> <?php digitalclusteruri_body_attributes(); ?>>
-<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=648c6e229c28110012954ddc&product=sop' async='async'></script>
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 

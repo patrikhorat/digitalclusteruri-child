@@ -437,7 +437,7 @@ function sharethisleft16_shortcode_func() {
     function sharethiscenter16_shortcode_func() { 
         
     // HTML code für shortcode
-    return '<div class="sharethis-container margin-bottom-16">
+    return '<div class="sharethis-container margin-bottom-16 sharethiscenter">
     <div class="sharethis-inline-share-buttons"></div>
     </div>';
     }

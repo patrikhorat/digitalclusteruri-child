@@ -34,7 +34,7 @@ defined( 'ABSPATH' ) || exit;
 	</header><!-- .entry-header -->
 
 	<div id="online-artikel-single-content-wrapper" class="entry-content">
-		<div class="sharethis-container margin-bottom-16">
+		<div class="sharethis-container margin-bottom-16 sharethiscenter">
 			<div class="sharethis-inline-share-buttons"></div>
 		</div>
 		<?php
