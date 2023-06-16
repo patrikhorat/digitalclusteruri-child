@@ -71,10 +71,12 @@ h4 {
     -webkit-text-stroke-color: $dcugreenlighter;
 }
 
-.styledark {
+.styledark,
+.styledark  a {
     color: white;
 }
-.stylelight {
+.stylelight,
+.stylelight a {
     color: $dcugreen;
 }
 
