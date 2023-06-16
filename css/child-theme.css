@@ -14503,11 +14503,13 @@ h4, .h4 {
   -webkit-text-stroke-color: #357362;
 }
 
-.styledark {
+.styledark,
+.styledark a {
   color: white;
 }
 
-.stylelight {
+.stylelight,
+.stylelight a {
   color: #0F393A;
 }
 
