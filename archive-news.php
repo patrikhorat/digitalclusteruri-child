@@ -27,10 +27,8 @@ $container = get_theme_mod( 'digitalclusteruri_container_type' );
 				<header class="page-header">
 					<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
-
-					the_archive_title( '<h2 >Alle ', '</h2>' );
-
 					?>
+					<h2>Das läuft gerade bei uns</h2>
 					<div class="addthis-container margin-bottom-15 addthisleft">
 						<div class="addthis_inline_share_toolbox"></div>
 					</div>
