@@ -15783,6 +15783,9 @@ img.staff-member-photo {
   box-shadow: none !important;
 }
 
+.padding-desktop {
+  padding: 4rem;
+}
 @media (max-width: 1200px) {
   .padding-desktop {
     padding: 4rem;
