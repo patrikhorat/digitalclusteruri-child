@@ -422,27 +422,28 @@ add_role('vereinsmitglied', __(
  );
 
 
- /* Create Shortcode for AddThis addthisshortcode */
- function addthisleft15_shortcode_func() { 
+/* Create Shortcode for ShareThis sharethisshortcode */
+function sharethisleft16_shortcode_func() { 
   
-// HTML code für shortcode
-return '<div class="addthis-container margin-bottom-15 addthisleft">
-<div class="addthis_inline_share_toolbox"></div>
-</div>';
-
-}
-// Register shortcode
-add_shortcode('addthisleft15', 'addthisleft15_shortcode_func'); 
-
-function addthiscenter15_shortcode_func() { 
-  
-// HTML code für shortcode
-return '<div class="addthis-container margin-bottom-15">
-<div class="addthis_inline_share_toolbox"></div>
-</div>';
-}
-// Register shortcode
-add_shortcode('addthiscenter15', 'addthiscenter15_shortcode_func'); 
+    // HTML code für shortcode
+    return '<div class="sharethis-container margin-bottom-16 sharethisleft">
+    <div class="sharethis-inline-share-buttons"></div>
+    </div>';
+    
+    }
+    // Register shortcode
+    add_shortcode('sharethisleft16', 'sharethisleft16_shortcode_func'); 
+    
+    function sharethiscenter16_shortcode_func() { 
+        
+    // HTML code für shortcode
+    return '<div class="sharethis-container margin-bottom-16">
+    <div class="sharethis-inline-share-buttons"></div>
+    </div>';
+    }
+    // Register shortcode
+    add_shortcode('sharethiscenter16', 'sharethiscenter16_shortcode_func'); 
+    
 
 
 // Search form

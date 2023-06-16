@@ -15466,59 +15466,21 @@ input:focus-visible {
   font-weight: 700;
 }
 
-/* AddThis Styling */
+/* ShareThis Styling */
 .margin-bottom-50 {
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 
-.margin-bottom-15 {
-  margin-bottom: 15px;
+.margin-bottom-16 {
+  margin-bottom: 1rem;
 }
 
-.addthis-container, .addthis-container__left {
-  display: block;
-  text-align: center !important;
+.sharethis-container {
   background-color: transparent;
 }
-.addthis-container .addthis_inline_share_toolbox a, .addthis-container__left .addthis_inline_share_toolbox a {
-  border-radius: 666 !important;
-  background-color: #EF8451 !important;
-  margin: 0 5px !important;
-}
-@media (min-width: 768px) {
-  .addthis-container .addthis_inline_share_toolbox a, .addthis-container__left .addthis_inline_share_toolbox a {
-    margin: 0 3px !important;
-  }
-}
-.addthis-container .addthis_inline_share_toolbox a .at-icon-wrapper, .addthis-container__left .addthis_inline_share_toolbox a .at-icon-wrapper {
-  height: 30px !important;
-  width: 30px !important;
-  line-height: 30px !important;
-}
-.addthis-container .addthis_inline_share_toolbox a .at-icon-wrapper svg, .addthis-container__left .addthis_inline_share_toolbox a .at-icon-wrapper svg {
-  height: 30px !important;
-  width: 30px !important;
-  line-height: 30px !important;
-}
-@media (min-width: 768px) {
-  .addthis-container .addthis_inline_share_toolbox a .at-icon-wrapper, .addthis-container__left .addthis_inline_share_toolbox a .at-icon-wrapper {
-    height: 24px !important;
-    width: 24px !important;
-    line-height: 24px !important;
-  }
-  .addthis-container .addthis_inline_share_toolbox a .at-icon-wrapper svg, .addthis-container__left .addthis_inline_share_toolbox a .at-icon-wrapper svg {
-    height: 24px !important;
-    width: 24px !important;
-    line-height: 24px !important;
-  }
-}
-.addthis-container__left {
-  text-align: left !important;
-}
 
-.addthisleft {
-  text-align: left !important;
-  margin-left: -5px;
+.sharethiscenter > .sharethis-inline-share-buttons {
+  text-align: center !important;
 }
 
 /* staff list css: ersetzt Plugin CSS */

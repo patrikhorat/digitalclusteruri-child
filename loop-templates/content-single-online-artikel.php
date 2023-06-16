@@ -44,8 +44,8 @@ defined( 'ABSPATH' ) || exit;
 	</header><!-- .entry-header -->
 
 	<div id="online-artikel-single-content-wrapper" class="entry-content">
-		<div class="addthis-container margin-bottom-50">
-			<div class="addthis_inline_share_toolbox"></div>
+		<div class="sharethis-container margin-bottom-16">
+			<div class="sharethis-inline-share-buttons"></div>
 		</div>
 		<?php
 		the_content();
