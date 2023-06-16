@@ -74,7 +74,7 @@ $container = get_theme_mod( 'digitalclusteruri_container_type' );
 					?>
 					<?php
 						if ( !is_user_logged_in() ) {
-							print ( '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-logout" class="linkbutton menu-item menu-item-type-post_type menu-item-object-page page_item page-item-logout nav-item"><a title="Logout" href="' . get_site_url() .'/login/" class="nav-link" aria-current="page">Login</a></li>');
+							print ( '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-logout" class="linkbutton menu-item menu-item-type-post_type menu-item-object-page page_item page-item-logout nav-item"><a title="Logout" href="' . get_home_url() .'/login/" class="nav-link" aria-current="page">Login</a></li>');
 						} else {
 							print ( '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-logout" class="linkbutton menu-item menu-item-type-post_type menu-item-object-page page_item page-item-logout nav-item"><a title="Logout" href="'. wp_logout_url() .'" class="nav-link" aria-current="page">Logout</a></li>');
 						}
