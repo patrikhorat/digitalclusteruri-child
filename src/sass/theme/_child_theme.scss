@@ -1314,11 +1314,11 @@ img.staff-member-photo {
 }
 
 .padding-desktop {
-    padding: 4rem;
-    @media(max-width: $largescreen) {
-        padding: 4rem;
-    }
+    padding: 4rem !important;
     @media(max-width: $mediumscreen) {
-        padding: 3rem;
+        padding: 1rem !important;
+    }
+    @media(max-width: $smallscreen) {
+        padding: 0rem !important;
     }
 }

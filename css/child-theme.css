@@ -15784,16 +15784,16 @@ img.staff-member-photo {
 }
 
 .padding-desktop {
-  padding: 4rem;
-}
-@media (max-width: 1200px) {
-  .padding-desktop {
-    padding: 4rem;
-  }
+  padding: 4rem !important;
 }
 @media (max-width: 992px) {
   .padding-desktop {
-    padding: 3rem;
+    padding: 1rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .padding-desktop {
+    padding: 0rem !important;
   }
 }
 
