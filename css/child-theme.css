@@ -14890,6 +14890,18 @@ h4, .h4 {
   color: #ffffff !important;
 }
 
+.vc_btn3-color-btn-digitalclusteruri-yellow {
+  background-color: #edcb50 !important;
+  border-color: transparent !important;
+  color: #000000 !important;
+}
+
+.vc_btn3-color-btn-digitalclusteruri-yellow:hover {
+  background-color: #EF8451 !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+}
+
 /* wpbakery customization */
 /* element margin within row/column*/
 .wpb_content_element {

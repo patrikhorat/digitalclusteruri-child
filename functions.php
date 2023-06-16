@@ -557,6 +557,7 @@ function change_vc_button_colors() {
         $param['value'][__( 'DCU White', 'digitalclusteruri-child' )] = 'btn-digitalclusteruri-white';
         $param['value'][__( 'DCU Light Gray', 'digitalclusteruri-child' )] = 'btn-digitalclusteruri-lightgray';
         $param['value'][__( 'DCU Orange', 'digitalclusteruri-child' )] = 'btn-digitalclusteruri-orange';
+        $param['value'][__( 'DCU Yellow', 'digitalclusteruri-child' )] = 'btn-digitalclusteruri-yellow';
 	
 	// Remove any colors you don't want to use.
 		unset($param['value']['Classic Grey']);
