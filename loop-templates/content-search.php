@@ -37,11 +37,4 @@ defined( 'ABSPATH' ) || exit;
 		<?php the_excerpt(); ?>
 
 	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-
-		<?php digitalclusteruri_entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
-
 </article><!-- #post-## -->
