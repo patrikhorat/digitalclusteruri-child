@@ -15764,6 +15764,10 @@ img.staff-member-photo {
   padding: 1rem;
 }
 
+.hashtaglistbuttons {
+  text-align: center;
+}
+
 .hashtaglistbuttons button {
   text-transform: none !important;
 }
