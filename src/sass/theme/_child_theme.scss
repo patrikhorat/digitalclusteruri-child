@@ -1314,6 +1314,7 @@ img.staff-member-photo {
 }
 
 .padding-desktop {
+    padding: 4rem;
     @media(max-width: $largescreen) {
         padding: 4rem;
     }
