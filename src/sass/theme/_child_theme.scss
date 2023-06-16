@@ -448,7 +448,7 @@ h4 {
     color: #ffffff  !important;
 }
 .vc_btn3-color-btn-digitalclusteruri-yellow {
-    background-color: #edcb50 !important;
+    background-color: $dcuyellow !important;
     border-color: transparent !important;
     color: #000000 !important;
 }
@@ -1295,4 +1295,14 @@ img.staff-member-photo {
 }
 .traegerschaft img {
     padding: 1rem;
+}
+.hashtaglistbuttons button {
+    text-transform: none !important;
+}
+.hashtaglistbuttons .vc_btn3-container {
+    margin-bottom: 0.3rem !important;
+    margin-top: 0.3rem !important;
+}
+.hashtaglistbuttons .vc_btn3-container .vc_btn3-style-classic {
+    box-shadow: none !important;
 }
