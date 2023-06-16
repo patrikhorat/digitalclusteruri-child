@@ -15736,17 +15736,20 @@ img.staff-member-photo {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.85rem;
-  text-align: center;
 }
 
 .traegerschaft p {
   text-align: center;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem !important;
+  margin-bottom: 1rem !important;
 }
 
 .traegerschaft .wpb_content_element {
   margin-bottom: 0px !important;
+}
+
+.traegerschaft img {
+  padding: 1rem;
 }
 
 .has-blue-color,
