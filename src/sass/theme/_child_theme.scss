@@ -1245,3 +1245,19 @@ img.staff-member-photo {
 .register-error:last-child {
     margin-bottom: 15px;
 }
+
+
+/* Special Stylings */
+.drop-shadow-orange {
+    box-shadow: 3vw 3vw $dcuorange;
+}
+.dcuroundedcorner {
+    border-radius: 4px !important;
+}
+.textaligncenter {
+    text-align: center;
+}
+.halfsize {
+    width: 60%;
+    margin: auto;
+}

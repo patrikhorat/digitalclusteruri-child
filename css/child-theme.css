@@ -15703,6 +15703,24 @@ img.staff-member-photo {
   margin-bottom: 15px;
 }
 
+/* Special Stylings */
+.drop-shadow-orange {
+  box-shadow: 3vw 3vw #EF8451;
+}
+
+.dcuroundedcorner {
+  border-radius: 4px !important;
+}
+
+.textaligncenter {
+  text-align: center;
+}
+
+.halfsize {
+  width: 60%;
+  margin: auto;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
