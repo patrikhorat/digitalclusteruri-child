@@ -54,7 +54,8 @@ $container = get_theme_mod( 'digitalclusteruri_container_type' );
 			?>
 
 		</main><!-- #main -->
-
+		<div class="teaser-box"><div class="teaser-box-filler"></div>
+		</div>
 	</div><!-- #content -->
 
 </div><!-- #archive-wrapper -->
