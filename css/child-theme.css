@@ -15638,6 +15638,10 @@ img.staff-member-photo {
   padding-bottom: 0px;
 }
 
+.teaser-box-filler {
+  height: 10px;
+}
+
 /* Login / Registration Styling */
 #dcu-login-box p.login-username, #dcu-login-box p.login-password {
   margin-bottom: 8px;
