@@ -54,15 +54,7 @@ $container = get_theme_mod( 'digitalclusteruri_container_type' );
 			?>
 
 		</main><!-- #main -->
-		<div class="teaser-box">
-		<?php 	// Get the Content Box for the Forum Header
-				$contentbox = get_page_by_title( 'Teaser Box - Online Artikel Archiv', '', 'content-boxen' );
-				$contentboxid = $contentbox->ID;
-				$post_contentbox = get_post($contentboxid);
-				$content_contentbox = $post_contentbox->post_content;
-				echo do_shortcode($content_contentbox);
-		?>
-		</div>
+
 	</div><!-- #content -->
 
 </div><!-- #archive-wrapper -->
