@@ -14,22 +14,16 @@ defined( 'ABSPATH' ) || exit;
 	<header class="entry-header">
 
 		<?php
+
 		the_title(
 			sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 			'</a></h3>'
 		);
 		?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-
-			<div class="entry-meta">
-
-				<?php digitalclusteruri_posted_on(); ?>
-
+		<div class="entry-meta search-result-meta">Typ: 
+			<?php $post_type = get_post_type_object( get_post_type($post) );
+				echo $post_type->label ; ?> 
 			</div><!-- .entry-meta -->
-
-		<?php endif; ?>
-
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">

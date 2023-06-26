@@ -15635,6 +15635,12 @@ img.staff-member-photo {
   max-width: 500px;
 }
 
+.search-result-meta {
+  font-weight: 700;
+  color: #EF8451;
+  margin-bottom: 0.5rem;
+}
+
 /* Teaser Box */
 .teaser-box {
   margin-top: 0px;
