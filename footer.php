@@ -28,7 +28,7 @@ $container = get_theme_mod( 'digitalclusteruri_container_type' );
     </div>
     <div class="copyrightbar">
         <div class="copybrightwrapper <?php echo esc_attr( $container ); ?>">
-            <div class="copyright">Copyright @ 2022 Digital Cluster Uri. Alle Rechte vorbehalten</div>
+            <div class="copyright">©  <?php echo date("Y"); ?> Digital Cluster Uri. Alle Rechte vorbehalten</div>
             <div class="socialiconbar">
                 <?php
                     wp_nav_menu(
