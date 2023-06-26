@@ -14513,6 +14513,11 @@ h4, .h4 {
   color: #0F393A;
 }
 
+/* Temporary Hide Elements*/
+.hideobject {
+  display: none;
+}
+
 #wrapper-navbar {
   background: #FFFFFF;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1607843137);
