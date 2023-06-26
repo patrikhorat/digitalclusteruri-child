@@ -468,6 +468,25 @@ function search_form_shortcode( ) {
      }
  }
 
+ // Suche Ordnen
+ function order_search_by_posttype($orderby){
+    if (!is_admin() && is_search()) :
+        global $wpdb;
+        $orderby =
+            "
+            CASE WHEN {$wpdb->prefix}posts.post_type = 'post' THEN '1' 
+                 WHEN {$wpdb->prefix}posts.post_type = 'online-artikel' THEN '2' 
+                 WHEN {$wpdb->prefix}posts.post_type = 'news' THEN '3' 
+                 WHEN {$wpdb->prefix}posts.post_type = 'page' THEN '4' 
+                 WHEN {$wpdb->prefix}posts.post_type = 'autoren' THEN '5' 
+            ELSE {$wpdb->prefix}posts.post_type END ASC, 
+            {$wpdb->prefix}posts.post_title ASC";
+    endif;
+    return $orderby;
+}
+add_filter('posts_orderby', 'order_search_by_posttype');
+
+
  /* Language Selector Dissable on Login Page */
  add_filter( 'login_display_language_dropdown', '__return_false' );
 
